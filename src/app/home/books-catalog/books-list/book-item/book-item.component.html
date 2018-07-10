@@ -1,0 +1,23 @@
+<div 
+[class]="'card z-depth-2' + (isXsScreen() ? ' ml-auto mr-auto' : ' ml-auto mr-auto')" 
+[ngStyle]="{'width' : (isXsScreen() && !isMobileDevice() ? '280px' :
+            (isXsScreen() && isMobileDevice() && !isLandscapeScreen() ? '85%' : '100%'))}">
+    <div class="full-card view zoom waves-light" mdbWavesEffect>
+        <img class="img-fluid book-img" [src]="book.bookImage" alt="Card image cap">
+
+        <div class="card-body">
+            <h5 class="card-title">{{book.bookTitle | filterBookTitle}}</h5>
+            <p class="card-text">{{book.authorName  | filterBookTitle}}</p>
+            <p class="card-text">{{book.publishedDate  | date}}</p>
+            
+            <div class="text-center animated fadeIn" *ngIf="isInEditMode">
+                <button type="button" (click)="editBook()" class="btn btn-primary waves-light" mdbWavesEffect>
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </button>
+                <button type="button" (click)="deleteBook()" class="btn btn-danger waves-light" mdbWavesEffect>
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

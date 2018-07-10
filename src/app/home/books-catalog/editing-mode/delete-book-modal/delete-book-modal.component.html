@@ -1,0 +1,36 @@
+<div
+    *ngIf="isModalShown"
+    (onHidden)="onHidden()"
+    [config]="{ show: true }" 
+    mdbModal 
+    #autoShownModal="mdb-modal" 
+    class="modal fade" 
+    [ngClass]="{
+        'pt-1' : isMobileDevice() , 
+        'pt-5' : !isMobileDevice()}" 
+    tabindex="-1" 
+    role="dialog" 
+    aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-danger" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="heading lead">Delete Book</p>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="hideModal()">
+                    <span aria-hidden="true" class="white-text">×</span>
+                </button>
+            </div>
+            <div 
+                class="modal-body"
+                [ngStyle]="{'max-height' : isLandscapeScreen() && isMobileDevice() ? '40vh' : '60vh'}">
+                <div class="text-center">
+                    <i class="fa fa-trash fa-4x mb-3"></i>
+                    <p>Are you sure you want to delete "{{bookToDelete.bookTitle | filterBookTitle}}"?</p>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <a type="button" (click)="deleteBook(bookToDelete)" class="btn btn-danger" data-dismiss="modal" mdbWavesEffect>Delete</a>
+                <a type="button" (click)="hideModal()" class="btn btn-primary" data-dismiss="modal" mdbWavesEffect>Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>

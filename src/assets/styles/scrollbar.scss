@@ -1,0 +1,30 @@
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f18a; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.473); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(85, 85, 85, 0.432); 
+}
+@media only screen and (max-width: 720px)  {
+    div.modal-content{
+        width:100%;
+    }
+    .modal-body{
+        width: 98%;
+    }
+    ul{
+        width:95%;
+    }
+}

@@ -1,0 +1,28 @@
+<div class="container page-padding">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="h1 font-weight-bold text-center mb-5 pt-4">iBook Catalog</h2>
+            <p class="text-center pb-4">
+                The Best Bookstore Online,
+                Over 6 million books ready for shipment within 24 hours and 4.5 million eBooks to download now.
+                Discover over 2,960 journals, 48,300 books, and many iconic reference works.
+                Free shipping. No minimum order.
+            </p>
+
+            <app-switch 
+                [switchText]="switchText" 
+                (switchActivated)="isInEditMode = $event">
+            </app-switch>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <app-books-list [booksList]="booksList" [isInEditMode]="isInEditMode"></app-books-list>
+        </div>
+    </div>
+</div>
+
+<app-create-books [booksList]="booksList"></app-create-books>
+<app-delete-book-modal></app-delete-book-modal>
+<app-edit-book-modal [booksList]="booksList"></app-edit-book-modal>

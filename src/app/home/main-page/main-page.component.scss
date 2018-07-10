@@ -1,0 +1,84 @@
+.main-page-top{
+    background-image: url("http://d2616tuem1neks.cloudfront.net/assets/pages/home/covers_nonblurred-c2a1791ed26cb7a9270b72d8d31a52806c62929b7c7e1ffef83e984a1d2b4a5d.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+}
+
+.main-page-content{
+    padding-top: 60px;
+}
+
+.center-page{
+    min-height: 100vh; 
+    padding: 11vh 0;
+}
+
+.center-page-content{
+    text-align: center;
+}
+
+.logo{
+    background-image: url("/assets/images/logo.png"); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 0 0 30px black;
+    text-align: center;
+    border-radius: 100%;
+}
+
+.lg-logo-size{
+    height: 300px;
+    width: 300px;
+}
+
+.xs-logo-size{
+    height: 150px;
+    width: 150px;
+}
+
+.logo-text{
+    color: white;
+    text-shadow: 0 0 10px black;
+    font-size: 450%;
+}
+
+.logo-text-landscape{
+    color: white;
+    text-shadow: 0 0 10px black;
+    font-size: 60px;
+}
+
+.arrow{
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    min-width: 300px;
+}
+
+.arrow-down{
+    border: 2px solid white;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 0 25px black; 
+}
+
+.arrow-regular{
+    font-size: 50px;
+    padding: 10px 20px;
+}
+
+.fa:hover{
+    transition: 0.2s;
+    box-shadow: 0 0 25px black; 
+}
+
+.fa{
+    line-height: 50px;
+    text-shadow: 0 0 15px black;
+    box-shadow: 0 0 15px black; 
+}

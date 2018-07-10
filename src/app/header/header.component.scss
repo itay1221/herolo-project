@@ -1,0 +1,56 @@
+.bg-dark-transparent{
+    transition: 0.2s;
+    background-color: hsla(226, 30%, 11%, 0.863) !important;
+}
+
+.bg-dark{
+    transition: 0.2s;
+    background-color: hsla(226, 30%, 11%, 1) !important;
+}
+
+.navbar{
+    box-shadow : 0 0 25px black;
+}
+
+nav{
+    min-width: 300px;
+}
+
+.brand-logo{
+    height: 33px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.navbar-brand{
+    margin-right: 0;
+    cursor: pointer;
+}
+
+.navbar-brand:focus{
+    outline: 0;
+}
+
+.navbar-nav{
+    padding: 0;
+}
+
+.chart{
+    color: white;
+    // right: 0;
+    // position: absolute;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+table{
+    width: 100%;
+}
+
+.brand-title{
+    margin: 0;
+}
+
+.nav-link{
+    text-align: left;
+}

@@ -1,0 +1,65 @@
+<nav mdb-navbar 
+    [class]="'navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar' + 
+              (menuOpened ?  ' bg-dark' : ' bg-dark-transparent')"
+    [ngStyle]="{'height' : !isMobile() ? '70px' : 'auto'}"
+    (window:resize)="onResize()">
+
+    <div class="container">
+        <logo class="navbar-brand" (click)="linkClicked(0)" [ngx-scroll-to]="'main-page'">
+                <table>
+                    <tr>
+                        <td>
+                            <img class="brand-logo" src="assets/images/logo.png" alt=""> 
+                        </td>
+                        <td>
+                            <p class="ml-2 logo brand-title h1-responsive">
+                                iBook
+                            </p> 
+                        </td>
+                    </tr>
+                </table>
+        </logo>
+
+        <button 
+            class="navbar-toggler collapsed" 
+            type="button" 
+            (click)="clickOnMobileMenuBtn()">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div [class]="'navbar-collapse' + (menuOpened ? ' mt-2 mb-1' : '')"
+            [ngStyle]="{
+            'transition' : menuActionTime + 'ms' ,
+            'overflow' : isMobile() ? menuOverflow : 'visible',
+            'height' : isMobile() ? getMenuHeight(0) : 'auto'}">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <ul class="navbar-nav">
+                            <li 
+                                [class]="'nav-item waves-effect waves-light' + (clickedLinkIndex == i ? ' active' : '')"
+                                (click)="linkClicked(i)" 
+                                *ngFor="let link of links; let i = index">
+                                <a
+                                    (click)="link.functionToStart ? linkWithFunction(link.name) : null"
+                                    [ngx-scroll-to]="link.idToScrollTo ? link.idToScrollTo : null" 
+                                    class="nav-link">
+                                    {{link.name}}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar-nav" *ngIf="!isMobile()">
+                        <a class="text-white chart nav-link">
+                            <i class="fa fa-bell-o" aria-hidden="true"></i>
+                        </a> 
+                        <a class="text-white chart nav-link">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </a>                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

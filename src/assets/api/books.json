@@ -1,0 +1,86 @@
+[
+    {
+        "id" : 1,
+        "authorName" : "chloe benjamin",
+        "publishedDate" : "2018-07-08",
+        "bookTitle" : "the immortalists",
+        "bookImage" : "https://res.cloudinary.com/bookbub/image/upload/c_scale,w_405/v1517258160/pro_pbid_3911057.jpg"
+    },
+    {
+        "id" : 2,
+        "authorName" : "lan samantha chang",
+        "publishedDate" : "2008-07-08",
+        "bookTitle" : "inheritance",
+        "bookImage" : "https://res.cloudinary.com/bookbub/image/upload/c_scale,w_405/v1528382625/pro_pbid_446500.jpg"
+    },
+    {
+        "id" : 3,
+        "authorName" : "Susan Mallery",
+        "publishedDate" : "2018-07-01",
+        "bookTitle" : "best of my love",
+        "bookImage" : "https://res.cloudinary.com/bookbub/image/upload/c_scale,w_405/v1494936328/pro_pbid_1209662.jpg"
+    },
+    {
+        "id" : 4,
+        "authorName" : "Terry Lynn Thomas",
+        "publishedDate" : "2018-05-01",
+        "bookTitle" : "The Silent Woman",
+        "bookImage" : "https://res.cloudinary.com/bookbub/image/upload/c_scale,w_405/v1528381616/pro_pbid_4003665.jpg"
+    },
+    {
+        "id" : 5,
+        "authorName" : "Susan Mallery",
+        "publishedDate" : "2010-09-01",
+        "bookTitle" : "The Atomic City Girls",
+        "bookImage" : "https://res.cloudinary.com/bookbub/image/upload/c_scale,w_405/v1521493581/pro_pbid_3923863.jpg"
+    },
+    {
+        "id" : 6,
+        "authorName" : "Wayne Johnston",
+        "publishedDate" : "2016-02-08",
+        "bookTitle" : "The Colony of Unrequited Dreams",
+        "bookImage" : "https://res.cloudinary.com/bookbub/image/upload/c_scale,w_405/v1530639025/pro_pbid_1048192.jpg"
+    },
+    {
+        "id" : 7,
+        "authorName" : "Michelle Moran",
+        "publishedDate" : "2016-05-05",
+        "bookTitle" : "Madame Tussaud",
+        "bookImage" : "https://res.cloudinary.com/bookbub/image/upload/c_scale,w_405/v1530108208/pro_pbid_15284.jpg"
+    },
+    {
+        "id" : 8,
+        "authorName" : "Stephanie Dray and Laura Kamoie",
+        "publishedDate" : "2017-03-02",
+        "bookTitle" : "My Dear Hamilton",
+        "bookImage" : "https://res.cloudinary.com/bookbub/image/upload/c_scale,w_405/v1525879154/pro_pbid_3938932.jpg"
+    },
+    {
+        "id" : 9,
+        "authorName" : "Cheri Allan",
+        "publishedDate" : "2015-11-01",
+        "bookTitle" : "Luck of the Draw",
+        "bookImage" : "https://res.cloudinary.com/bookbub/image/upload/c_scale,w_405/v1472817666/pro_pbid_828965.jpg"
+    },
+    {
+        "id" : 10,
+        "authorName" : "Richard Turner",
+        "publishedDate" : "2018-07-01",
+        "bookTitle" : "Goliath",
+        "bookImage" : "https://res.cloudinary.com/bookbub/image/upload/c_scale,w_405/v1516218702/pro_pbid_15286.jpg"
+    },
+    {
+        "id" : 11,
+        "authorName" : "Charlie N. Holmberg",
+        "publishedDate" : "2017-08-07",
+        "bookTitle" : "!!ThE-- PaPEr@@@ MagiciAn!%#@",
+        "bookImage" : "https://res.cloudinary.com/bookbub/image/upload/c_scale,w_405/v1474483308/pro_pbid_824554.jpg"
+    },
+    {
+        "id" : 12,
+        "authorName" : "Heather Hildenbrand",
+        "publishedDate" : "2016-12-22",
+        "bookTitle" : "Imitation",
+        "bookImage" : "https://res.cloudinary.com/bookbub/image/upload/c_scale,w_405/v1502900886/pro_pbid_124551.jpg"
+    }
+]

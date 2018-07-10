@@ -1,0 +1,37 @@
+.form-control{
+    padding-top: 15px;
+    margin-bottom: 5px;
+}
+    
+.ng-invalid{
+    transition: 0.2s;
+    border-color: #eb6c78 !important;
+    border-width: 1.2px !important;
+    color: #dc3545 !important;
+}
+
+span{
+    font-size: 13px;
+}
+
+.error{
+    transition: 0.2s;
+    color: red;
+    .fa{
+        color: red;
+    }
+}
+
+.md-form{
+    margin-bottom: 28px;
+}
+
+.modal-body{
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100% !important;
+}
+
+.modal-dialog.modal-notify.modal-info .modal-header {
+    background-color: #01010fd9;
+}

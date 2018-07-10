@@ -1,0 +1,26 @@
+<div class="mb-4 pb-4" id="container" (click)="onClick()">
+    <div class="inner-container">
+        <div class="toggle">
+            <p>{{switchText.rightSide}}</p>
+        </div>
+
+        <div class="toggle">
+            <p>{{switchText.leftSide}}</p>
+        </div>
+    </div>
+
+    <div 
+        class="inner-container"
+        [ngStyle]="{
+            'clip-path' :  (isSwitchActive ? 'inset(0 0 0 50%)' : 'inset(0 50% 0 0)'),
+            'background' : (isSwitchActive ? '#D74046' : 'dodgerblue')
+        }" 
+        id='toggle-container'>
+        <div class="toggle">
+            <p>{{switchText.rightSide}}</p>
+        </div>
+        <div class="toggle">
+            <p>{{switchText.leftSide}}</p>
+        </div>
+    </div>
+</div>

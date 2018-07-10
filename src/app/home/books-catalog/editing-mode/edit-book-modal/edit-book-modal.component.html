@@ -1,0 +1,107 @@
+<div
+    *ngIf="isModalShown"
+    (onHidden)="onHidden()" 
+    [config]="{ show: true }" 
+    mdbModal 
+    #autoShownModal="mdb-modal" 
+    class="modal fade"
+    [ngClass]="{
+        'pt-1' : isMobileDevice() , 
+        'pt-5' : !isMobileDevice()}" 
+    tabindex="-1" 
+    role="dialog" 
+    aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="heading lead">Edit Book</p>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="hideModal()">
+                    <span aria-hidden="true" class="white-text">×</span>
+                </button>
+            </div>                
+            <form *ngIf="!isLoadingPage; else loading" [formGroup]="editBookForm" (ngSubmit)="saveEditedBook(bookToEdit)">
+                <div 
+                    class="modal-body" 
+                    [ngStyle]="{'max-height' : isLandscapeScreen() && isMobileDevice() ? '40vh' : '60vh'}">
+                    <div class="row"> 
+                        <div class="col-6">
+                            <div class="md-form">
+                                <input 
+                                formControlName="bookTitle"
+                                type="text" 
+                                id="bookTitle"
+                                class="form-control"> 
+                                <label for="bookTitle" class="label active">Book Title</label>
+                                <span *ngIf="!checkFormControlValid('bookTitle')" class="error">Invalid Book Title!</span>
+                            </div>
+
+                            <div class="md-form">
+                                <input 
+                                formControlName="authorName"
+                                type="text" 
+                                id="authorName"
+                                class="form-control"> 
+                                <label for="authorName" class="label active">Author Name</label>
+                                <span *ngIf="!checkFormControlValid('authorName')" class="error">Invalid Author Name!</span>
+                            </div>
+
+                            <div class="md-form">
+                                <input 
+                                formControlName="publishedDate"
+                                type="date" 
+                                id="publishedDate"
+                                class="form-control"> 
+                                <label for="publishedDate" class="label active">Published Date</label>
+                                <span *ngIf="!checkFormControlValid('publishedDate')" class="error">Invalid Date!</span>
+                            </div>
+
+                            <div class="md-form">
+                                <input 
+                                formControlName="bookImage"
+                                type="text" 
+                                id="bookImage"
+                                (ngModelChange)="onChangeBookImage()"
+                                class="form-control"> 
+                                <label for="bookImage" class="label active">Book Image</label>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <img class="img-fluid book-img z-depth-2" [src]="bookImgToPreview">
+                        </div>
+                    </div>
+
+                    <div class="row error mt-3" *ngIf="errorSavingEditedBook">
+                        <div class="col-12">
+                            <h5 class="h5-responsive text-center">
+                                <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                {{errorSavingEditedBook}}
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer justify-content-center">
+                    <button 
+                        type="submit" 
+                        [class]="'btn' + (!editBookForm.valid ? 
+                                 ' disabled btn-blue-grey' : ' btn-danger')" 
+                        [disabled]="!editBookForm.valid"
+                        data-dismiss="modal" 
+                        mdbWavesEffect>
+                        Save
+                    </button>
+                    <a type="button" (click)="hideModal()" class="btn btn-primary" data-dismiss="modal" mdbWavesEffect>Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<ng-template #loading>
+        <div class="modal-body">
+            <div class="animated fadeIn">
+                <div class="big-spinner"></div> 
+            </div>        
+        </div>
+</ng-template>

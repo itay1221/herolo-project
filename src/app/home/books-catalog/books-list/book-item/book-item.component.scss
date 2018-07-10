@@ -1,0 +1,27 @@
+.card{
+    height: 100%;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+}
+
+.book-img{
+    height: 400px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.card-body{
+    position: absolute;
+    bottom: 0rem;
+    width: 100%;
+    padding: 1.2rem;
+    background-color: rgba(27, 27, 27, 0.774);
+    text-shadow: 0 0 5px black;
+}
+
+.card-title{
+    color: white;
+}
+
+.card-text{
+    color: rgb(214, 214, 214) !important; 
+}
