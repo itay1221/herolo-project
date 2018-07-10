@@ -111,7 +111,7 @@ export class EditBookModalComponent implements OnInit , OnDestroy {
 
     isBookTitleExist(title : string , id : number) : boolean{
         return this.booksList.filter(
-            book => ((book.bookTitle.toLocaleLowerCase() == title.toLocaleLowerCase())
+            book => ((book.bookTitle.trim().toLocaleLowerCase() == title.trim().toLocaleLowerCase())
                     && (book.id != id))).length > 0;
     }
 

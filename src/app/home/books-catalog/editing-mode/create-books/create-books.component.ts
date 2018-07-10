@@ -115,7 +115,7 @@ export class CreateBooksComponent implements OnInit , OnDestroy {
 
     isBookTitleExist(title : string) : boolean{
         return this.booksList.filter(
-            book => ((book.bookTitle.toLocaleLowerCase() == title.toLocaleLowerCase()))).length > 0;
+            book => ((book.bookTitle.trim().toLocaleLowerCase() == title.trim().toLocaleLowerCase()))).length > 0;
     }
 
     isFormControlNotValidAndTouched(formControlName : string) : boolean{
